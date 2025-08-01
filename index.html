@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Inria+Serif&display=swap" rel="stylesheet" />
@@ -6,8 +5,43 @@
     <link href="./css/main.css" rel="stylesheet" />
     <title>Jillian</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .music-prompt {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 9999;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .v26_19 {
+            width: 1920px;
+            height: 1080px;
+            position: relative;
+            background: url("../images/v26_19.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
+    <audio id="bgMusic" loop src="./audio/music2.mp3"></audio>
+    <div class="music-prompt" id="musicPrompt">Click to play music - Jillian</div>
     <div class="v26_19">
         <div class="v5_2"></div>
         <div class="v6_46">
@@ -18,9 +52,9 @@
         <div class="v6_9"></div>
         <span class="v6_41">我爱你，宝贝S♡</span>
         <div class="v6_45">
-            <div class="v6_42"></div>
-            <div class="v6_43"></div>
-            <div class="v6_44"></div>
+            <button class="v6_42" onclick="window.open('https://www.youtube.com/@AhiraFN', '_blank')" style="position: absolute; top: 0px; left: 0px; z-index: 999;"></button>
+            <button class="v6_43" onclick="window.open('https://github.com/Jilliandotlua', '_blank')" style="position: absolute; top: 0px; left: 72px; z-index: 999;"></button>
+            <button class="v6_44" onclick="window.open('https://www.roblox.com/users/3132501966/profile', '_blank')" style="position: absolute; top: 0px; left: 146px; z-index: 999;"></button>
         </div>
         <div class="v6_47"></div>
         <span class="v6_51">❥ ~ About Me ~ /ᐠ > ˕ <マ  ✦.------------------------------------------------------.✦ᶻ 𝗓 𐰁<br>
@@ -50,17 +84,25 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Battlefield 5,<br>
 ♡ Any pronouns (Preferably She/Her)<br>
 ♡ My discord should always be 'sleepynilou' ₍ ˃ ⤙ ˂ ₎ა<br>
-╚══════ ❀ ✿ ღღ ❀ ✿ ══════════════════╝ᶻ 𝗓</span>
+╚══════ ❀ ✿ ღღ ❀ ✿ ══════════════════════╝ᶻ 𝗓</span>
         <div class="v8_33"></div>
         <div class="name"></div>
         <div class="v12_4">
             <div class="v8_6"></div>
         </div>
-        <div class="v12_5">
-            <div class="v13_57"></div>
-            <div class="v12_2"></div>
-            <div class="v12_7"></div>
+        <div class="playlist-wrapper">
+            <img src="./images/v12_2.png" alt="Playlist" class="playlist-img" />
         </div>
     </div>
+    <script>
+    document.onclick = () => {
+        const music = document.getElementById('bgMusic');
+        const prompt = document.getElementById('musicPrompt');
+        music.volume = 0.1;
+        music.play();
+        prompt.style.display = 'none';
+        document.onclick = null;
+    };
+    </script>
 </body>
 </html>
