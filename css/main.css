@@ -227,6 +227,7 @@ html, body {
   color: #fff;
 }
 .v12_4 {
+  border-radius: 20px;
   width: 397px;
   height: 733px;
   background: url("../images/v12_4.png");
