@@ -125,7 +125,7 @@ html, body {
 .v6_42:hover,
 .v6_43:hover,
 .v6_44:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .v6_45 {
@@ -329,7 +329,7 @@ html, body {
   top: 12.5vh;
   right: 6.9vw;
   width: 26vw;
-  height: 78vh;
+  height: 84vh;
   border: 4px solid rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   overflow: hidden;
@@ -338,7 +338,7 @@ html, body {
 }
 
 .playlist-img {
-  width: 100%;
+  width: 110%;
   height: 100%;
   object-fit: cover;
   display: block;
